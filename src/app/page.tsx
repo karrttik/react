@@ -1,6 +1,15 @@
+import React from 'react'
+import Navbar from "../components/comp-nav/Navbar"
+import NavbarRight from "../components/comp-nav/NavbarRight"
 
-export default function Home() {
+
+const page = () => {
   return (
-    <h1>Hello, World</h1>
+    <>
+      <Navbar />
+      <NavbarRight />
+    </>
   )
 }
+
+export default page
