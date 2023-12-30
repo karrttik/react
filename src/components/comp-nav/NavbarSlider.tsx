@@ -20,101 +20,110 @@ const NavbarSlider: React.FC = () => {
         <button
           type="button"
           className="cursor-pointer text-black opacity-50 md:hidden px-3 py-1 text-xl leading-none bg-transparent rounded border border-solid border-transparent"
-          onclick="toggleNavbar('example-collapse-sidebar')">
+          onClick={() => toggleNavbar('example-collapse-sidebar')}>
             <i className="fas fa-bars"></i>
         </button>
-
-          <a
-            className="md:block text-left md:pb-2 text-blueGray-600 mr-0 inline-block whitespace-nowrap text-sm uppercase font-bold p-4 px-0"
+        
+          <a 
             href="../../index.html"
-          >
+            className="md:block text-left md:pb-2 text-blueGray-600 mr-0 inline-block whitespace-nowrap text-sm uppercase font-bold p-4 px-0">
             Notus Tailwind JS
           </a>
+
           <ul className="md:hidden items-center flex flex-wrap list-none">
             <li className="inline-block relative">
+
               <a
                 className="text-blueGray-500 block py-1 px-3"
                 href="#pablo"
-                onclick="openDropdown(event,'notification-dropdown')"
-                ><i className="fas fa-bell"></i
-              ></a>
-              <div
-                className="hidden bg-white text-base z-50 float-left py-2 list-none text-left rounded shadow-lg min-w-48"
-                id="notification-dropdown"
+                onClick={(event) => openDropdown(event, 'notification-dropdown')}
               >
+                <i className="fas fa-bell"></i>
+              </a>
+
+              <div
+                id="notification-dropdown"
+                className="hidden bg-white text-base z-50 float-left py-2 list-none text-left rounded shadow-lg min-w-48">
+
                 <a
                   href="#pablo"
                   className="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
-                  >Action</a
-                ><a
-                  href="#pablo"
-                  className="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
-                  >Another action</a
-                ><a
-                  href="#pablo"
-                  className="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
-                  >Something else here</a
-                >
-                <div
-                  className="h-0 my-2 border border-solid border-blueGray-100"
-                ></div>
+                  >Action</a>
+                
                 <a
                   href="#pablo"
                   className="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
-                  >Seprated link</a
-                >
+                  >Another action</a>
+                  
+                <a
+                  href="#pablo"
+                  className="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
+                >Something else here</a>
+
+                <div className="h-0 my-2 border border-solid border-blueGray-100"></div>
+
+                <a
+                  href="#pablo"
+                  className="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
+                >Seprated link</a>
+
               </div>
             </li>
+
             <li className="inline-block relative">
+
               <a
-                className="text-blueGray-500 block"
                 href="#pablo"
-                onclick="openDropdown(event,'user-responsive-dropdown')"
-                ><div className="items-center flex">
-                  <span
-                    className="w-12 h-12 text-sm text-white bg-blueGray-200 inline-flex items-center justify-center rounded-full"
-                    ><img
+                className="text-blueGray-500 block"
+                onClick={(event) => openDropdown(event, 'notification-dropdown')}
+              >
+                <div className="items-center flex">
+                  <span className="w-12 h-12 text-sm text-white bg-blueGray-200 inline-flex items-center justify-center rounded-full">
+                    <img
                       alt="..."
                       className="w-full rounded-full align-middle border-none shadow-lg"
-                      src="../../assets/img/team-1-800x800.jpg"
-                  /></span></div
-              ></a>
+                      src="../../assets/img/team-1-800x800.jpg"/>
+                  </span>
+                </div>
+              </a>
+
               <div
-                className="hidden bg-white text-base z-50 float-left py-2 list-none text-left rounded shadow-lg min-w-48"
                 id="user-responsive-dropdown"
+                className="hidden bg-white text-base z-50 float-left py-2 list-none text-left rounded shadow-lg min-w-48"
               >
                 <a
                   href="#pablo"
                   className="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
-                  >Action</a
-                ><a
-                  href="#pablo"
-                  className="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
-                  >Another action</a
-                ><a
-                  href="#pablo"
-                  className="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
-                  >Something else here</a
-                >
-                <div
-                  className="h-0 my-2 border border-solid border-blueGray-100"
-                ></div>
+                  >Action</a>
+                  
                 <a
                   href="#pablo"
                   className="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
-                  >Seprated link</a
-                >
+                  >Another action</a>
+                  
+                <a
+                  href="#pablo"
+                  className="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
+                  >Something else here</a>
+
+                <div className="h-0 my-2 border border-solid border-blueGray-100"></div>
+
+                <a
+                  href="#pablo"
+                  className="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
+                  >Seprated link</a>
+
               </div>
             </li>
           </ul>
+
           <div
-            className="md:flex md:flex-col md:items-stretch md:opacity-100 md:relative md:mt-4 md:shadow-none shadow absolute top-0 left-0 right-0 z-40 overflow-y-auto overflow-x-hidden h-auto items-center flex-1 rounded hidden"
             id="example-collapse-sidebar"
-          >
-            <div
-              className="md:min-w-full md:hidden block pb-4 mb-4 border-b border-solid border-blueGray-200"
-            >
+            className="md:flex md:flex-col md:items-stretch md:opacity-100 md:relative md:mt-4 md:shadow-none shadow absolute top-0 left-0 right-0 z-40 overflow-y-auto overflow-x-hidden h-auto items-center flex-1 rounded hidden">
+            
+            <div className="md:min-w-full md:hidden block pb-4 mb-4 border-b border-solid border-blueGray-200">
               <div className="flex flex-wrap">
+
                 <div className="w-6/12">
                   <a
                     className="md:block text-left md:pb-2 text-blueGray-600 mr-0 inline-block whitespace-nowrap text-sm uppercase font-bold p-4 px-0"
@@ -123,17 +132,20 @@ const NavbarSlider: React.FC = () => {
                     Notus Tailwind JS
                   </a>
                 </div>
+
                 <div className="w-6/12 flex justify-end">
                   <button
                     type="button"
                     className="cursor-pointer text-black opacity-50 md:hidden px-3 py-1 text-xl leading-none bg-transparent rounded border border-solid border-transparent"
-                    onclick="toggleNavbar('example-collapse-sidebar')"
+                    onClick={() => toggleNavbar('example-collapse-sidebar')}
                   >
                     <i className="fas fa-times"></i>
                   </button>
                 </div>
+
               </div>
             </div>
+
             <form className="mt-6 mb-4 md:hidden">
               <div className="mb-3 pt-0">
                 <input
@@ -143,15 +155,12 @@ const NavbarSlider: React.FC = () => {
                 />
               </div>
             </form>
-            <!-- Divider -->
+
+            {/* <!-- Divider --> */}
             <hr className="my-4 md:min-w-full" />
-            <!-- Heading -->
-            <h6
-              className="md:min-w-full text-blueGray-500 text-xs uppercase font-bold block pt-1 pb-4 no-underline"
-            >
-              Admin Layout Pages
-            </h6>
-            <!-- Navigation -->
+            {/* <!-- Heading --> */}
+            <h6 className="md:min-w-full text-blueGray-500 text-xs uppercase font-bold block pt-1 pb-4 no-underline">Admin Layout Pages</h6>
+            {/* <!-- Navigation --> */}
 
             <ul className="md:flex-col md:min-w-full flex flex-col list-none">
               <li className="items-center">
@@ -197,15 +206,11 @@ const NavbarSlider: React.FC = () => {
               </li>
             </ul>
 
-            <!-- Divider -->
+            {/* <!-- Divider --> */}
             <hr className="my-4 md:min-w-full" />
-            <!-- Heading -->
-            <h6
-              className="md:min-w-full text-blueGray-500 text-xs uppercase font-bold block pt-1 pb-4 no-underline"
-            >
-              Auth Layout Pages
-            </h6>
-            <!-- Navigation -->
+            {/* <!-- Heading --> */}
+            <h6 className="md:min-w-full text-blueGray-500 text-xs uppercase font-bold block pt-1 pb-4 no-underline">Auth Layout Pages</h6>
+            {/* <!-- Navigation --> */}
 
             <ul
               className="md:flex-col md:min-w-full flex flex-col list-none md:mb-4"
@@ -235,15 +240,15 @@ const NavbarSlider: React.FC = () => {
               </li>
             </ul>
 
-            <!-- Divider -->
+            {/* <!-- Divider --> */}
             <hr className="my-4 md:min-w-full" />
-            <!-- Heading -->
+            {/* <!-- Heading --> */}
             <h6
               className="md:min-w-full text-blueGray-500 text-xs uppercase font-bold block pt-1 pb-4 no-underline"
             >
               No Layout Pages
             </h6>
-            <!-- Navigation -->
+            {/* <!-- Navigation --> */}
 
             <ul
               className="md:flex-col md:min-w-full flex flex-col list-none md:mb-4"
@@ -253,11 +258,7 @@ const NavbarSlider: React.FC = () => {
                   href="../landing.html"
                   className="text-blueGray-700 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block"
                 >
-                  <i
-                    className="fas fa-newspaper text-blueGray-300 mr-2 text-sm"
-                  ></i>
-                  Landing Page
-                </a>
+                  <i className="fas fa-newspaper text-blueGray-300 mr-2 text-sm"></i>Landing Page</a>
               </li>
 
               <li className="items-center">
@@ -265,23 +266,15 @@ const NavbarSlider: React.FC = () => {
                   href="../profile.html"
                   className="text-blueGray-700 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block"
                 >
-                  <i
-                    className="fas fa-user-circle text-blueGray-300 mr-2 text-sm"
-                  ></i>
-                  Profile Page
-                </a>
+                  <i className="fas fa-user-circle text-blueGray-300 mr-2 text-sm"></i>Profile Page</a>
               </li>
             </ul>
 
-            <!-- Divider -->
+            {/* <!-- Divider --> */}
             <hr className="my-4 md:min-w-full" />
-            <!-- Heading -->
-            <h6
-              className="md:min-w-full text-blueGray-500 text-xs uppercase font-bold block pt-1 pb-4 no-underline"
-            >
-              Documentation
-            </h6>
-            <!-- Navigation -->
+            {/* <!-- Heading --> */}
+            <h6 className="md:min-w-full text-blueGray-500 text-xs uppercase font-bold block pt-1 pb-4 no-underline">Documentation</h6>
+            {/* <!-- Navigation --> */}
             <ul
               className="md:flex-col md:min-w-full flex flex-col list-none md:mb-4"
             >
@@ -291,11 +284,7 @@ const NavbarSlider: React.FC = () => {
                   target="_blank"
                   className="text-blueGray-700 hover:text-blueGray-500 text-sm block mb-4 no-underline font-semibold"
                 >
-                  <i
-                    className="fas fa-paint-brush mr-2 text-blueGray-300 text-base"
-                  ></i>
-                  Styles
-                </a>
+                  <i className="fas fa-paint-brush mr-2 text-blueGray-300 text-base"></i>Styles</a>
               </li>
 
               <li className="inline-flex">
@@ -304,11 +293,7 @@ const NavbarSlider: React.FC = () => {
                   target="_blank"
                   className="text-blueGray-700 hover:text-blueGray-500 text-sm block mb-4 no-underline font-semibold"
                 >
-                  <i
-                    className="fab fa-css3-alt mr-2 text-blueGray-300 text-base"
-                  ></i>
-                  CSS Components
-                </a>
+                  <i className="fab fa-css3-alt mr-2 text-blueGray-300 text-base"></i>CSS Components</a>
               </li>
 
               <li className="inline-flex">
@@ -317,11 +302,7 @@ const NavbarSlider: React.FC = () => {
                   target="_blank"
                   className="text-blueGray-700 hover:text-blueGray-500 text-sm block mb-4 no-underline font-semibold"
                 >
-                  <i
-                    className="fab fa-angular mr-2 text-blueGray-300 text-base"
-                  ></i>
-                  Angular
-                </a>
+                  <i className="fab fa-angular mr-2 text-blueGray-300 text-base"></i>Angular</a>
               </li>
 
               <li className="inline-flex">
@@ -330,11 +311,7 @@ const NavbarSlider: React.FC = () => {
                   target="_blank"
                   className="text-blueGray-700 hover:text-blueGray-500 text-sm block mb-4 no-underline font-semibold"
                 >
-                  <i
-                    className="fab fa-js-square mr-2 text-blueGray-300 text-base"
-                  ></i>
-                  Javascript
-                </a>
+                  <i className="fab fa-js-square mr-2 text-blueGray-300 text-base"></i>Javascript</a>
               </li>
 
               <li className="inline-flex">
