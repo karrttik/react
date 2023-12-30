@@ -1,13 +1,14 @@
+import HeaderDashboard from '@/components/comp-head/HeaderDashboard'
+import NavbarDashboard from '@/components/comp-nav/NavbarDashboard'
+import NavbarRightDashboard from '@/components/comp-nav/NavbarRightDashboard'
 import React from 'react'
-import Navbar from "../components/comp-nav/Navbar"
-import NavbarRight from "../components/comp-nav/NavbarRight"
-
 
 const page = () => {
   return (
     <>
-      <Navbar />
-      <NavbarRight />
+      <NavbarDashboard />
+      <NavbarRightDashboard />
+      <HeaderDashboard />
     </>
   )
 }
